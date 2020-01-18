@@ -1,0 +1,64 @@
+group 'react-start'
+version '0.0.1'
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.2.2.RELEASE'
+    }
+}
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'ivy-publish'
+
+mainClassName = 'su.svn.Main'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+dependencies {
+    compile group: 'org.jetbrains', name: 'annotations', version: '13.0'
+    compile group: 'com.google.collections', name: 'google-collections', version: '1.0'
+    compile 'org.apache.tomcat.embed:tomcat-embed-core:8.5.50'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.2.2.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.2.2.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-websocket', version: '2.2.2.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.2.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.2.2.RELEASE'
+    compile 'org.springframework.batch:spring-batch-core:4.2.1.RELEASE'
+    compile 'org.hsqldb:hsqldb:2.5.0' // DB
+
+    // Testing
+    testCompile "org.junit.platform:junit-platform-launcher:1.4.1"
+    testCompile "org.junit.platform:junit-platform-commons:1.4.0"
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.5.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.2'
+    testRuntimeOnly group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.5.2'
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.5.2'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.2.2.RELEASE'
+    testCompile group: 'org.springframework', name: 'spring-test', version: '5.2.3.RELEASE'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+build {
+}
+
+bootRun {
+}
