@@ -1,8 +1,6 @@
 # react-start
 Basic configuration of the project using React + Redux + Bootstrap + Spring + boot + multiple DataBases.
 
-![front](https://raw.githubusercontent.com/impressionBit/react-start/master/image/image.jpg)
-
 ### Start project
 - install [java version 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - install [node.js](https://nodejs.org/en/download/current/)
@@ -11,4 +9,4 @@ Basic configuration of the project using React + Redux + Bootstrap + Spring + bo
 - Run cmd `npm i`
 - Run cmd `gradle build`
 - Run cmd `gradle bootRun`
-- Open [http://localhost:8090/application/](http://localhost:18090/application/)
+- Open [http://localhost:18090/application/](http://localhost:18090/application/)

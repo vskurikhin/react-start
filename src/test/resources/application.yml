@@ -32,7 +32,7 @@ db:
   # Настройки сервиса фронта
   front:
     datasource:
-      jdbcUrl: jdbc:hsqldb:file:~/db/front
+      jdbcUrl: jdbc:hsqldb:file:~/db/test/front
       username: developer
       password: developer
       driverClassName: org.hsqldb.jdbcDriver
