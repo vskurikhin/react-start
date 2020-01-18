@@ -10,6 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 import su.svn.config.FrontDbConfig;
+import su.svn.config.IntegrationDbConfig;
 import su.svn.db.front.dao.UserDao;
 import su.svn.db.front.domain.User;
 import su.svn.db.integration.dao.MessageDao;
@@ -20,7 +21,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {FrontDbConfig.class})
+@ContextConfiguration(classes = {FrontDbConfig.class, IntegrationDbConfig.class})
 @DataJpaTest
 class MultipleDbJpaTest {
 
