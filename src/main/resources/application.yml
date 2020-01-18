@@ -40,7 +40,23 @@ db:
       properties:
         hibernate:
           dialect: org.hibernate.dialect.H2Dialect
-          ddl-auto: create
+          ddl-auto: update
+          generate-ddl: true
+          temp:
+            use_jdbc_metadata_defaults: false
+        show-sql: true
+  # Настройки сервиса интеграции
+  integration:
+    datasource:
+      jdbcUrl: jdbc:hsqldb:file:~/db/integration
+      username: developer
+      password: developer
+      driverClassName: org.hsqldb.jdbcDriver
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.H2Dialect
+          ddl-auto: update
           generate-ddl: true
           temp:
             use_jdbc_metadata_defaults: false
